@@ -155,6 +155,7 @@ a:hover {
     padding: 10px 14px;
     border: none;
     box-shadow: 0 0 5px var(--fourthly-color);
+    
 }
 
 .header .btns .log-in-btn {
@@ -177,15 +178,17 @@ a:hover {
 
     background-color: var(--sixthly-color);
     box-shadow: 0 0 5px var(--sixthly-color);
+    transform: scale(1.05);
 }
 
 .main {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
-.main .hero-section {
+.main .hero-section{
     width: 85vw;
     height: 70vh;
     display: flex;
@@ -229,7 +232,7 @@ a:hover {
 }
 
 .hero-section-text-container-learn-more-btn {
-    width: 8vw;
+    width: 9vw;
     margin: 0 0 0 10px;
     padding: 11px 15px;
     box-sizing: border-box;
@@ -248,5 +251,55 @@ a:hover {
 .hero-section-text-container-learn-more-btn:hover {
     background-color: var(--sixthly-color);
     box-shadow: 0 0 5px var(--sixthly-color);
-    width: 10vw;
+    transform: scale(1.05);
 }
+.companies-logo-section{
+    width: 85vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.companies-logo-section-text{
+    text-align: center;
+
+
+}
+.companies-logo-section-logos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+.section-logos{
+    width: 12vw;
+    height: 6vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.section-logos:nth-child(1){
+    background-image: url(amazon.png);  
+}
+.section-logos:nth-child(2){
+    background-image: url(google.png);
+}
+.section-logos:nth-child(3){
+    background-image: url(godaddy.png);
+}
+.section-logos:nth-child(4){
+    background-image: url(meta.png);
+}
+.section-logos:nth-child(5){
+    background-image: url(samsung.png);
+}
+.section-logos:nth-child(6){
+    background-image: url(unity.png);
+}
+
