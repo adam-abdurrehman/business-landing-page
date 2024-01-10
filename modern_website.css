@@ -18,11 +18,34 @@
     --roboto: 'Roboto', sans-serif;
 }
 
+::selection{
+    color: var(--thirdly-color);
+    background-color: var(--sixthly-color);
+}
+
+::-webkit-scrollbar{
+    width: 1vh;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--fourthly-color);
+    border-radius: 100px;
+    margin: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--seventhly-color);
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--sixthly-color);
+}
+
 body {
     font-family: 'poppins', sans-serif;
     transition-duration: 500ms;
     transition-timing-function: ease;
     transition-delay: 10ms;
+    scroll-behavior: smooth;
+    background-color: var(--primary-color);
 }
 
 h1 {
@@ -47,23 +70,24 @@ a {
 a:hover {
     color: var(--sixthly-color);
 }
+.top-baner,.top-baner-text,.top-baner-text-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+/*top baner*/
 
 .top-baner {
     width: 100%;
     height: 5vh;
     background-color: var(--ninthly-color);
     color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
 }
 
 .top-baner-text {
     width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 5px;
 }
 
@@ -73,11 +97,16 @@ a:hover {
     transition: 1s;
 }
 
+/*header*/
+.header,.header .logo,.header .nav,.header .nav ul,.header .btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  
+
 .header {
     height: 8vh;
-    display: flex;
     align-items: flex-end;
-    justify-content: center;
     gap: 2vb;
 }
 
@@ -85,7 +114,6 @@ a:hover {
     width: 15vw;
     height: 9vh;
     object-fit: cover;
-    display: flex;
     align-items: flex-end;
     justify-content: flex-end;
 }
@@ -98,15 +126,9 @@ a:hover {
 .header .nav {
     height: 7vh;
     width: 60vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .header .nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 7vb;
 }
 
@@ -130,8 +152,6 @@ a:hover {
     padding: 0;
     width: 15vw;
     height: 7vh;
-    display: flex;
-    align-items: center;
     justify-content: space-evenly;
 }
 
@@ -181,7 +201,7 @@ a:hover {
     transform: scale(1.05);
 }
 
-.main {
+.main,.main .hero-section,.main .hero-section .hero-section-text-container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -191,19 +211,14 @@ a:hover {
 .main .hero-section{
     width: 85vw;
     height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
 }
 
 .main .hero-section .hero-section-text-container {
     width: 50vw;
     height: 60vh;
     text-align: left;
-    display: flex;
     align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
     gap: 30px;
 }
 
@@ -302,4 +317,35 @@ a:hover {
 .section-logos:nth-child(6){
     background-image: url(unity.png);
 }
+.features-section,.features-section-blob,.features-section-text-box,.features-section-text-box-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.features-section{
+    width: 85vw;
+    height: 90vh;
+    
+}
+.features-section-blob{
+    position: absolute;
+    background-image: url(blob.png);
+    width: 50vw;
+    height: 60vh;
+    background-blend-mode: color;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 70vh;
+    transform: rotate(45deg);
+    filter: grayscale(1);
+    opacity: .2;
+}
+.features-section-text-box{
+    position: absolute;
+    flex-direction: column;
+}
+
+
 
